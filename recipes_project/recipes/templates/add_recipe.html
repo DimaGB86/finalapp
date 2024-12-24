@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Добавить рецепт{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 card shadow-sm">
+            <h1 class="text-center mb-4">Добавить рецепт</h1>
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group row">
+                    <label for="id_title" class="col-sm-3 col-form-label">Название рецепта</label>
+                    <div class="col-sm-9">
+                        {{ form.title }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="id_preparation_time" class="col-sm-3 col-form-label">Время приготовления</label>
+                    <div class="col-sm-9">
+                        {{ form.preparation_time }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                <label for="id_ingredients" class="col-sm-3 col-form-label">Ингредиенты</label>
+                <div class="col-sm-9">
+                    <small class="text-muted">Выберите нужные ингредиенты.</small>
+                    <br>
+                    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+                        {% for subwidget in form.ingredients.subwidgets %}
+                            <div style="width: 25%;">
+                                {{ subwidget }}
+                            </div>
+                            {% if forloop.counter|divisibleby:3 %}
+                                <!-- Добавляем разрыв строки каждые 4 элемента -->
+                                <div style="width: 100%; height: 0px;"></div>
+                            {% endif %}
+                        {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="id_category" class="col-sm-3 col-form-label">Категория</label>
+                    <div class="col-sm-9">
+                        {{ form.category }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="id_image" class="col-sm-3 col-form-label">Картинка</label>
+                    <div class="col-sm-9">
+                        {{ form.image }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="id_description" class="col-sm-3 col-form-label">Описание</label>
+                    <div class="col-sm-9">
+                        {{ form.description }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="id_author" class="col-sm-3 col-form-label">Автор</label>
+                    <div class="col-sm-9">
+                        {{ form.author }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="offset-sm-3 col-sm-9">
+                        <button type="submit" class="btn btn-success">Сохранить</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

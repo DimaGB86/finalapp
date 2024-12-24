@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Удаление рецепта{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="alert alert-warning" role="alert">
+        <h2 class="alert-heading">Вы уверены, что хотите удалить рецепт "{{ object.title }}"?</h2>
+        <p>Это действие нельзя отменить.</p>
+        <hr>
+        <form method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Подтвердить удаление</button>
+            <a href="{% url 'home' %}" class="btn btn-secondary ml-2">Отмена</a>
+        </form>
+    </div>
+</div>
+{% endblock %}

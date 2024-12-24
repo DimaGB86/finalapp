@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Редактирование рецепта{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h1 class="mb-4">Редактирование рецепта: {{ object.title }}</h1>
+    <form method="post" enctype="multipart/form-data" novalidate>
+        {% csrf_token %}
+        <div class="mb-3">
+            {{ form.title.errors }}
+            <label for="id_title" class="form-label">Название рецепта:</label>
+            {{ form.title }}
+        </div>
+        <div class="mb-3">
+            {{ form.preparation_time.errors }}
+            <label for="id_preparation_time" class="form-label">Время приготовления в минутах:</label>
+            {{ form.preparation_time }}
+        </div>
+        <div class="mb-3">
+            <label for="id_category" class="form-label">Категория:</label>
+            {{ form.category }}
+        </div>
+        <div class="mb-3">
+            <label for="id_image" class="form-label">Картинка:</label>
+            {{ form.image }}
+        </div>
+        <div class="mb-3">
+            {{ form.description.errors }}
+            <label for="id_description" class="form-label">Описание:</label>
+            {{ form.description }}
+        </div>
+        <div class="mb-3">
+            <label for="id_author" class="form-label">Автор:</label>
+            {{ form.author }}
+        </div>
+        <div class="mb-3">
+            <label for="id_ingredients" class="form-label">Ингредиенты:</label>
+            {{ form.ingredients }}
+        </div>
+        <button type="submit" class="btn btn-warning">Обновить</button>
+    </form>
+</div>
+{% endblock %}

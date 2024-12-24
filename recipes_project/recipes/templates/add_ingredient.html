@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Добавить новый ингредиент{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="card shadow-sm">
+        <div class="card-header bg-light">
+            <h2 class="mb-0">Добавить новый ингредиент</h2>
+        </div>
+        <div class="card-body">
+            <form method="post" novalidate>
+                {% csrf_token %}
+                <div class="mb-3">
+                    {{ form.name.errors }}
+                    <label for="id_name" class="form-label">Название ингредиента:</label>
+                    <input type="text" id="id_name" name="name" class="form-control" placeholder="Введите название ингредиента" required>
+                </div>
+                <button type="submit" class="btn btn-success">Сохранить</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

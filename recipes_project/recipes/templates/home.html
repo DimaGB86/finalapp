@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="text-center">Добро пожаловать в раздел «Рецепты»!</h1>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+        {% for recipe in recipes %}
+        <div class="col mb-4">
+            <div class="card h-100 w-100">
+                <img src="{{ recipe.image.url }}" class="card-img-top" alt="{{ recipe.title }}" style="object-fit: cover; width: 100%; height: 300px;">
+                <div class="card-body p-2">
+                    <h5 class="card-title">Название: {{ recipe.title }}</h5>
+                    <p class="card-text">Описание: {{ recipe.description|truncatewords:20 }}</p>
+                    <a href="{% url 'recipe-detail' recipe.id %}" class="btn btn-primary">Подробнее</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <p class="text-center mt-5">Этот сайт был разработан в рамках личного проекта для демонстрации моих навыков.</p>
+    <p class="text-center">Разработчик: Шаламов Дмитрий.</p>
+</div>
+{% endblock %}
