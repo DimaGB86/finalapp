@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df33d2d3-ebd1-44d6-b1dc-d98fd3fbc3bd" name="Changes" comment="editing README">
-      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.env.template" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+    <list default="true" id="df33d2d3-ebd1-44d6-b1dc-d98fd3fbc3bd" name="Changes" comment="test app">
+      <change beforePath="$PROJECT_DIR$/.env.template" beforeDir="false" afterPath="$PROJECT_DIR$/.env.template" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipes_project/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/recipes_project/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipes_project/recipes/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/recipes_project/recipes/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipes_project/recipes/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/recipes_project/recipes/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipes_project/recipes/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/recipes_project/recipes/templates/home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recipes_project/recipes_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/recipes_project/recipes_project/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipes_project/recipes_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/recipes_project/recipes_project/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,13 +34,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/python/recipes_project"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/python/recipes_project&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\python\recipes_project\recipes_project\recipes\static" />
@@ -90,12 +82,21 @@
       <option name="project" value="LOCAL" />
       <updated>1735044718383</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="test app">
+      <option name="closed" value="true" />
+      <created>1739385499129</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1739385499129</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="project basis" />
     <MESSAGE value="editing README" />
-    <option name="LAST_COMMIT_MESSAGE" value="editing README" />
+    <MESSAGE value="test app" />
+    <option name="LAST_COMMIT_MESSAGE" value="test app" />
   </component>
 </project>

@@ -9,6 +9,7 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
+from os import getenv
 import os
 from pathlib import Path
 
@@ -20,16 +21,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-r7x@k13o2t&zib2(8$@&$5yr9zc^6a^q=xl%m6%s8$9on0sal%'
-
+# SECRET_KEY = 'django-insecure-r7x@k13o2t&zib2(8$@&$5yr9zc^6a^q=xl%m6%s8$9on0sal%'
+SECRET_KEY = getenv(
+    'DJANGO_SECRET_KEY',
+    'django-insecure-r7x@k13o2t&zib2(8$@&$5yr9zc^6a^q=xl%m6%s8$9on0sal%',
+    )
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = getenv('DJANGO_DEBUG', "0") == "1"
 
 ALLOWED_HOSTS = [
     '0.0.0.0',
     'localhost',
     '127.0.0.1'
-]
+] + getenv('DJANGO_ALLOWED_HOSTS', '').split(',')
 
 
 # Application definition
