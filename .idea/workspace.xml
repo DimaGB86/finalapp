@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df33d2d3-ebd1-44d6-b1dc-d98fd3fbc3bd" name="Changes" comment="test app">
-      <change beforePath="$PROJECT_DIR$/.env.template" beforeDir="false" afterPath="$PROJECT_DIR$/.env.template" afterDir="false" />
+    <list default="true" id="df33d2d3-ebd1-44d6-b1dc-d98fd3fbc3bd" name="Changes" comment="config for deployment">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipes_project/recipes_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/recipes_project/recipes_project/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,13 +88,30 @@
       <option name="project" value="LOCAL" />
       <updated>1739385499129</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="config for deployment">
+      <option name="closed" value="true" />
+      <created>1739386845523</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1739386845523</updated>
+    </task>
+    <task id="LOCAL-00005" summary="config for deployment">
+      <option name="closed" value="true" />
+      <created>1739388646815</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1739388646816</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="project basis" />
     <MESSAGE value="editing README" />
     <MESSAGE value="test app" />
-    <option name="LAST_COMMIT_MESSAGE" value="test app" />
+    <MESSAGE value="config for deployment" />
+    <option name="LAST_COMMIT_MESSAGE" value="config for deployment" />
   </component>
 </project>
