@@ -17,12 +17,15 @@ class Ingredient(models.Model):
 
 
 class Recipe(models.Model):
+    '''
+    Модель рецепта который добавляем в базу данных
+    '''
     author = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)  # Автор рецепта
     title = models.CharField(max_length=255)  # Название рецепта
-    description = models.TextField()  # Описание рецепта.
-    ingredients = models.ManyToManyField(Ingredient)  # Список ингредиентов,
+    description = models.TextField()  # Описание рецепта
+    ingredients = models.ManyToManyField(Ingredient)  # Список ингредиентов
     category = models.ForeignKey(Category, on_delete=models.CASCADE)  # Категория рецепта
-    image = models.ImageField(upload_to='recipe_images/', blank=True)  # Изображение рецепта.
+    image = models.ImageField(upload_to='recipe_images/', blank=True)  # Изображение рецепта
     preparation_time = models.PositiveIntegerField()  # Время приготовления в минутах
     created_at = models.DateTimeField(auto_now_add=True)  # Дата создания рецепта
 
