@@ -19,4 +19,4 @@ services:
         max-file: '10'
         max-size: '200k'
     volumes:
-      - ./recipesite/database:/app/database
+      - ./recipes_project/database:/app/database
