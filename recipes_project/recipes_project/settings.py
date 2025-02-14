@@ -14,17 +14,12 @@ import os
 from pathlib import Path
 import logging.config
 
-import django.utils.log
 from django.urls import reverse_lazy
-
-from django.utils.translation import gettext_lazy as _
-
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 DATABASE_DIR = BASE_DIR / 'database'
 DATABASE_DIR.mkdir(exist_ok=True)
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -34,16 +29,15 @@ DATABASE_DIR.mkdir(exist_ok=True)
 SECRET_KEY = getenv(
     'DJANGO_SECRET_KEY',
     'django-insecure-r7x@k13o2t&zib2(8$@&$5yr9zc^6a^q=xl%m6%s8$9on0sal%',
-    )
+)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = getenv('DJANGO_DEBUG', "0") == "1"
 
 ALLOWED_HOSTS = [
-    '0.0.0.0',
-    'localhost',
-    '127.0.0.1'
-] + getenv('DJANGO_ALLOWED_HOSTS', '').split(',')
-
+                    '0.0.0.0',
+                    'localhost',
+                    '127.0.0.1'
+                ] + getenv('DJANGO_ALLOWED_HOSTS', '').split(',')
 
 # Application definition
 
@@ -90,7 +84,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'recipes_project.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
@@ -100,7 +93,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -120,7 +112,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
@@ -132,13 +123,11 @@ USE_I18N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
